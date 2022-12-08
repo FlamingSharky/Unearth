@@ -1,0 +1,9 @@
+README.md
+setup.py
+slowprint/__init__.py
+slowprint/slowprint.py
+slowprint.egg-info/PKG-INFO
+slowprint.egg-info/SOURCES.txt
+slowprint.egg-info/dependency_links.txt
+slowprint.egg-info/not-zip-safe
+slowprint.egg-info/top_level.txt
