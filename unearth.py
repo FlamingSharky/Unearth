@@ -2,7 +2,6 @@ from time import sleep
 from slowprint import slowprint
 import msvcrt
 
-import commandlist
 import database
 import gameevents
 
@@ -21,12 +20,11 @@ def titlescreen():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     print(database.title)
     print("\n")
-    sleep(2)
     print(database.titlescreen)
     print("\n")
-    sleep(2)
     print(database.pressStart)
     print("\n")
+    sleep(2)
     slowprint("© 2023 DAE (Sponsored by Dark Ages Expedition)", 0.3)
     input()
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
@@ -127,18 +125,31 @@ def wakeup():
     print("\n")
     sleep(1)
     slowprint("So...", 0.3)
+    gameevents.time()
     while True:
         slowprint("What do you do?:", 0.3)
         while msvcrt.kbhit():
             msvcrt.getch()
-        command = input()
+        command = input(">")
         if command == database.mistakeprevention:
             print("\n")
             slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist.commandlist)
+            print(gameevents.commandlist)
             print("\n")
         elif command == "options":
-            print(commandlist.options)
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the river\n"\
+                    "go east\n"\
+                    "go west\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "options\n")
         elif command == "look around":
             print("\n")
             slowprint("You look at the general area around you, north of you there is a river, in every other direction there seems to be more grasslands like the one you are in.", 0.3)
@@ -146,7 +157,7 @@ def wakeup():
             slowprint("There are some trees here and there that you cannot identify", 0.3)
             print("\n")
             slowprint("The voice in your head:", 0.1)
-            slowprint("I suggest you \"" + "\033[1m" + "look at the scenery" + "\033[0m" + "\". You might see something interesting!", 0.1)
+            slowprint("I suggest you use the \"" + "\033[1m" + "options" + "\033[0m" + "\" command. It will tell you what you can do!", 0.1)
             slowprint("You should definitely use the \"" + "\033[1m" + "map" + "\033[0m" + "\" command as well!", 0.1)
             print("\n\n")
             slowprint("Anyways...", 0.3)
@@ -175,7 +186,9 @@ def wakeup():
         elif command == "map":
             slowprint("You climb the tree to have a look at the general surrounding and have made out 9 separate squares for a map in the current area.", 0.3)
             slowprint("This is what you have drawn for a map in the first page of your notebook.", 0.3)
-            print(commandlist.map)
+            print("[X] [ ] [ ]\n"\
+          "[ ] [ ] [ ]\n"\
+          "[ ] [ ] [ ]\n")
         elif command == "devlocate":
             print(database.area)
         else:
@@ -193,7 +206,6 @@ if name == "":
     mainmenu()
     wakeup()    
 elif name == "developer":
-    database.area = 2
     gameevents.room2()
 else:
     mainmenu()
