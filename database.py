@@ -58,7 +58,9 @@ class Discovery():
     Isdrekin = textwrap.fill("As you ride on the back of the Isdrekin, you marvel at its stunning orange-purple color and cloud-like fur. You take in the sight of the serpentine wyvern's powerful and graceful movements as it glides through the sky on the updraft winds from the cliff. You see how the creature uses its ability to cool the moisture in the air to create a dense and obscuring fog, perfect for ambushing its prey. You can tell that the Isdrekin likely is a master of ambush, whether it be hiding and waiting for its next meal or stalking its prey.\n\
     \
     As you analyze the Isdrekin's tail, you note that it is safe to assume that its long, whip-like tail to stun its enemies. You also see the Isdrekin's near-frictionless fur, which not only helps it blend into the clouds but also likely protects it from the heat generated as it slithers on the ground. You can't help but feel a sense of awe and respect for this magnificent and formidable creature. Make sure to keep it calm and try not to start a fight with this apex of the skies.", width=150)
-    LunarisNightstalker = textwrap.fill("", width=150)
+    LunarisNightstalker = textwrap.fill("You notice the sharp, but not overly long, teeth glinting in the blue light. The Nightstalker's fur is a glossy black, absorbing the light instead of reflecting it. The two tails of the creature are slender and agile, twitching as the Nightstalker moves. The bioluminescent lure on its head is round and slightly bulbous, casting a soft blue glow that illuminates the area around it. The Nightstalker's eyes are piercing, reflecting the blue light and making it seem as though it is constantly watching the player.\n\
+    \
+    As the player continues to observe, he can see that the Nightstalker is muscular and athletic, its body perfectly adapted for hunting in the dark forest. Its movements are graceful, yet powerful, as it continues to circle the player, studying him in return. The player can't help but feel a sense of awe at the magnificent creature, the Lunaris Nightstalker, that he is lucky enough to be studying.", width=150)
 
 ### Quick Physical Analysis ###
 
