@@ -58,7 +58,7 @@ def room1():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -161,7 +161,7 @@ def room2():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -256,7 +256,7 @@ def room3():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -351,7 +351,7 @@ def room4():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -426,10 +426,18 @@ def room5():
             command = input(">")
             print("\n")
             if command == database.mistakeprevention:
-                print("\n")
-                slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-                print(commandlist)
-                print("\n")
+                slowprint("Possible Commands Include:\n", 0.3)
+                print("\n"\
+                    "go east\n"\
+                    "go west\n"\
+                    "go north\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "options\n")
             elif command == "options":
                 slowprint("Possible Commands Include:\n", 0.3)
                 print("\n"\
@@ -449,7 +457,7 @@ def room5():
                 slowprint("There are sounds everywhere around you coming from in the forest or outside in the grasslands.", 0.3)
                 slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
                 print("\n")
-                slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+                slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
                 print("\n")
                 print("\n")
                 slowprint("Anyways...", 0.3)
@@ -592,7 +600,7 @@ def room6():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -686,7 +694,7 @@ def room7():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -797,7 +805,7 @@ def room8():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -901,7 +909,7 @@ def room9():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -973,9 +981,9 @@ def river10():
     area = 10
     print("\n")
     slowprint("You get to the mouth of the lake and river where some fish are going downstream and others upstream, when you touch the water, there is a rather strong current.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the river\"" + "\033[0m" + " to try and swim to the other side.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go south\"" + "\033[0m" + " to the grasslands instead.", 0.3)
-    slowprint("You could also walk along the river to the " + "\033[1m" + "east" + "\033[0m" + ".", 0.3)
+    slowprint("If you want \"go to the river\"" + " to try and swim to the other side.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go south\"" + " to the grasslands instead.", 0.3)
+    slowprint("You could also walk along the river to the \"east\"" + ".", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1023,7 +1031,7 @@ def river10():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -1043,6 +1051,11 @@ def river10():
             lake16()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[^] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1064,9 +1077,9 @@ def river11():
     area = 11
     print("\n")
     slowprint("You get to the edge of the river where some fish are going downstream and others upstream, when you touch the water, there is an pretty strong current.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the river\"" + "\033[0m" + " to try and swim to the other side.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go south\"" + "\033[0m" + " to the grasslands instead.", 0.3)
-    slowprint("You could also walk along the river and " + "\033[1m" + "go west" + "\033[0m" + " or " + "\033[1m" + "go east" + "\033[0m" + ".", 0.3)
+    slowprint("If you want \"go to the river\"" + " to try and swim to the other side.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go south\"" + " to the grasslands instead.", 0.3)
+    slowprint("You could also walk along the river and \"go west\"" + " or \"go east\"" + ".", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1130,6 +1143,11 @@ def river11():
             lake16()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [^] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1151,9 +1169,9 @@ def river12():
     area = 12
     print("\n")
     slowprint("You get to a meander in the river where some fish are going downstream and others upstream, when you touch the water, there is an somewhat strong current.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the river\"" + "\033[0m" + " to try and swim to the other side.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go back\"" + "\033[0m" + " to the grasslands instead.", 0.3)
-    slowprint("You could also walk along the river and " + "\033[1m" + "go west" + "\033[0m" + " or " + "\033[1m" + "go south" + "\033[0m" + ".", 0.3)
+    slowprint("If you want \"go to the river\"" + " to try and swim to the other side.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go back\"" + " to the grasslands instead.", 0.3)
+    slowprint("You could also walk along the river and \"go west\"" + " or \"go south\"" + ".", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1212,6 +1230,11 @@ def river12():
             lake16()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [^]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1234,9 +1257,9 @@ def river13():
     area = 13
     print("\n")
     slowprint("You get to the mouth of the lake and river where some fish are going downstream and others upstream, when you touch the water, there is an incredibly strong current.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the river\"" + "\033[0m" + " to try and swim to the other side.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go west\"" + "\033[0m" + " to the grasslands instead.", 0.3)
-    slowprint("You could also walk along the river and " + "\033[1m" + "go north" + "\033[0m" + " or " + "\033[1m" + "go south" + "\033[0m" + ".", 0.3)
+    slowprint("If you want \"go to the river\"" + " to try and swim to the other side.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go west\"" + " to the grasslands instead.", 0.3)
+    slowprint("You could also walk along the river and \"go north\"" + " or \"go south\"" + ".", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1296,6 +1319,11 @@ def river13():
             lake16()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[ ] [ ] [>]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1318,9 +1346,9 @@ def waterfall14():
     area = 14
     print("\n")
     slowprint("You got to the edge of the waterfall where you see fish swimming away of the waterfall or some really odd fish jumping off and flying away like flying fish.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the river\"" + "\033[0m" + " to try and swim to the other side.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go back\"" + "\033[0m" + " to the cliff instead.", 0.3)
-    slowprint("You could also walk along the river and " + "\033[1m" + "go north" + "\033[0m" + " or perhaps you'd like to " + "\033[1m" + "jump off" + "\033[0m" +  " the cliff! Maybe you'll see something cool!", 0.3)
+    slowprint("If you want \"go to the river\"" + " to try and swim to the other side.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go west\" to the cliff instead.", 0.3)
+    slowprint("You could also walk along the river and \"go north\"" + " or perhaps you'd like to \"jump off\"" +  " the cliff! Maybe you'll see something cool!", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1333,7 +1361,7 @@ def waterfall14():
         print("\n")
         if command == "go to the river":
             riverevent()
-        elif command == "go back":
+        elif command == "go west":
             room9()
         elif command == "go north":
             river11()
@@ -1395,6 +1423,11 @@ def waterfall14():
             print("\n\n")
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [ ] [>]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1416,9 +1449,9 @@ def lake15():
     stringtime = str(timevalue)
     area = 15
     slowprint("You are in the sandy shoreline of the lake! Cacti are growing here and there and it's rather cool.\n", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the lake\"" + "\033[0m" + " to see what might pop up.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go east\"" + "\033[0m" + " to the swamp instead.", 0.3)
-    slowprint("You could also walk along the beach and " + "\033[1m" + "go south" + "\033[0m" + ". Maybe you'll see something cool!", 0.3)
+    slowprint("If you want \"go to the lake\"" + " to see what might pop up.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go east\"" + " to the swamp instead.", 0.3)
+    slowprint("You could also walk along the beach and \"go south\"" + ". Maybe you'll see something cool!", 0.3)
     slowprint("\nBut either way...", 0.3)
     timevalue += 1
     if timevalue == 25:
@@ -1459,11 +1492,11 @@ def lake15():
                     "options\n")
         elif command == "look around":
             print("\n")
-            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also " + "\033[1m" + "go back" + "\033[0m" + " to the swampy grasslands if you want.", 0.3)
+            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also \"go back\"" + " to the swampy grasslands if you want.", 0.3)
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some cacti here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -1490,6 +1523,11 @@ def lake15():
             room1()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[<] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1515,9 +1553,9 @@ def lake16():
     stringtime = str(timevalue)
     area = 16
     slowprint("You are in the sandy shoreline of the lake! Cacti are growing here and there and it's rather cool.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the lake\"" + "\033[0m" + " to see what might pop up.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go east\"" + "\033[0m" + " to the swamp instead.", 0.3)
-    slowprint("You could also walk along the beach and " + "\033[1m" + "go south or go north" + "\033[0m" + ". Maybe you'll see something cool!", 0.3)
+    slowprint("If you want \"go to the lake\"" + " to see what might pop up.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go east\"" + " to the swamp instead.", 0.3)
+    slowprint("You could also walk along the beach and \"go south or go north\"" + ". Maybe you'll see something cool!", 0.3)
     slowprint("\nAnyhow...", 0.3)
     timevalue += 1
     if timevalue == 25:
@@ -1560,11 +1598,11 @@ def lake16():
                     "options\n")
         elif command == "look around":
             print("\n")
-            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also " + "\033[1m" + "go back" + "\033[0m" + " to the swampy grasslands if you want.", 0.3)
+            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also \"go back\"" + " to the swampy grasslands if you want.", 0.3)
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some cacti here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -1593,6 +1631,11 @@ def lake16():
             room4()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[<] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1618,9 +1661,9 @@ def lake17():
     stringtime = str(timevalue)
     area = 17
     slowprint("You've gotten to the southern side of the beach. Seems like going any more south is blocked by some enormous rocks.", 0.3)
-    slowprint("If you want " + "\033[1m" + "\"go to the lake\"" + "\033[0m" + " to see what might pop up.", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go east\"" + "\033[0m" + " to the swamp instead.", 0.3)
-    slowprint("You could also walk along the beach and " + "\033[1m" + "go north" + "\033[0m" + ". Maybe you'll see something cool!", 0.3)
+    slowprint("If you want \"go to the lake\"" + " to see what might pop up.", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go east\"" + " to the swamp instead.", 0.3)
+    slowprint("You could also walk along the beach and \"go north\"" + ". Maybe you'll see something cool!", 0.3)
     slowprint("\nAnyways...", 0.3)
     timevalue += 1
     if timevalue == 25:
@@ -1661,11 +1704,11 @@ def lake17():
                     "options\n")
         elif command == "look around":
             print("\n")
-            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also " + "\033[1m" + "go back" + "\033[0m" + " to the swampy grasslands if you want.", 0.3)
+            slowprint("You look at the general area around you, south of you is more of the shoreline but you can also \"go back\"" + " to the swampy grasslands if you want.", 0.3)
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some cacti here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"" + "\033[1m" + "look around" + "\033[0m" + "\" every so often. You might see something interesting!", 0.1)
+            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
             print("\n")
             print("\n")
             slowprint("Anyways...", 0.3)
@@ -1692,6 +1735,11 @@ def lake17():
             room7()
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[<] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1718,8 +1766,8 @@ def cliff18():
     area = 18
     print("\n")
     slowprint("You got to the edge of the cliff where you see Isdrekin flying around the cliff or some really odd fish flying around like flying fish.", 0.3)
-    slowprint("You could also walk along the cliff and " + "\033[1m" + "go east" + "\033[0m" + " or perhaps you'd like to " + "\033[1m" + "jump off" + "\033[0m" +  " the cliff! Maybe you'll see something cool!", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go north\"" + "\033[0m" + " to the swamp instead.", 0.3)
+    slowprint("You could also walk along the cliff and \"go east\"" + " or perhaps you'd like to \"jump off\"" +  " the cliff! Maybe you'll see something cool!", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go north\"" + " to the swamp instead.", 0.3)
     timevalue += 1
     if timevalue == 24:
         timevalue = 0
@@ -1780,6 +1828,11 @@ def cliff18():
             print("\n\n")
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[v] [ ] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1802,8 +1855,8 @@ def cliff19():
     area = 19
     print("\n")
     slowprint("You got to the edge of the cliff where you see Isdrekin flying around the cliff or some really odd fish flying around like flying fish.", 0.3)
-    slowprint("You could also walk along the cliff and " + "\033[1m" + "go east or west" + "\033[0m" + " or perhaps you'd like to " + "\033[1m" + "jump off" + "\033[0m" +  " the cliff! Maybe you'll see something cool!", 0.3)
-    slowprint("But if you don't want to do that, you can always " + "\033[1m" + "\"go north\"" + "\033[0m" + " to the highlands instead.", 0.3)
+    slowprint("You could also walk along the cliff and \"go east or west\"" + " or perhaps you'd like to \"jump off\"" +  " the cliff! Maybe you'll see something cool!", 0.3)
+    slowprint("But if you don't want to do that, you can always \"go north\"" + " to the highlands instead.", 0.3)
     timevalue += 1
     if timevalue == 25:
         timevalue = 0
@@ -1865,6 +1918,11 @@ def cliff19():
             print("\n\n")
         elif command == "notebook":
             notebook()
+        elif command == "map":
+            slowprint("You look at your notebook and make a mental mark of where you are:", 0.3)
+            print("[ ] [ ] [ ]\n"\
+            "[ ] [ ] [ ]\n"\
+            "[ ] [v] [ ]\n")
         elif command == "time":
             slowprint("You look at the sun and make an estimate of the time:", 0.3)
             if timevalue > 12:
@@ -1888,12 +1946,11 @@ def cliff19():
 def riverevent():
     global area
     global timevalue
-    stringtime = str(timevalue)
     slowprint("You enter the river and immediately taken by the river, you struggle to swim to your goal.", 0.3)
     slowprint("This was a bad decision.", 0.3)
     print("\n")
     slowprint("The voice in your head: Hey! You seem to be in danger of drowning!", 0.3)
-    slowprint("I suggest you try and" + "\033[1m" + "\"swim out\"" + "\033[0m" + "of the water and get to a safe spot. Or... you can simply" + "\033[1m" + "\"give up.\"" + "\033[0m", 0.3)
+    slowprint("I suggest you try and\"swim out\"" + "of the water and get to a safe spot. Or... you can simply\"give up.\"", 0.3)
     print("\n")
     print("\n")
     slowprint("So...", 0.3)
@@ -1947,7 +2004,7 @@ def cactusevent():
         slowprint("Right before you arrive, you hear the sound of sand shifting. A large salamander creature you'd call the Arid Stalker later in your notebook emerges from the sand!!!", 0.3)
         slowprint("As it locks its three eyes on you, its metallic, round, hammer-like jaw opens sideways with a hiss that shows that it is ready to guard the cactus with its life.", 0.3) 
         print("\n")
-        slowprint("You realize that you have gotten too close and to its aloevirides cactus and you must either " + "\033[1m" + "fight it, study it, or run away." + "\033[0m", 0.3)
+        slowprint("You realize that you have gotten too close and to its aloevirides cactus and you must either \"fight it, study it, or run away.\"", 0.3)
         slowprint("So let's see...", 0.3)
         while True:
             print("\n\n")
@@ -2015,7 +2072,7 @@ def duckevent():
         gameover()
     else:
         slowprint("You sense their killing instinct and just stay still and write notes about them from a distance. Right after that, you decide to slowly walk away without them noticing you are there.", 0.3)
-        slowprint("You now have access to the " + "\033[1m" + "\"Gun Duck\"" + "\033[0m" + " note.", 0.3)
+        slowprint("You now have access to the \"Gun Duck\"" + " note.", 0.3)
         NoteAccess.GunDuckNote += 1
 
 def snaketaming():
@@ -2040,7 +2097,7 @@ def snaketaming():
     if x >= 2:
         print("\n")
         slowprint("You accidentally landed on one of those amphitheres! It's softer and warmer than you expected but at least you have no need to worry. Probably.", 0.3)
-        slowprint("Not much to do other than just look around from the back of this enormous creature. I guess you could " + "\033[1m" + "study it, jump off" + "\033[0m" + ", or try and see if it can help you " + "\033[1m" + "go back" + "\033[0m")
+        slowprint("Not much to do other than just look around from the back of this enormous creature. I guess you could \"study it, jump off\"" + ", or try and see if it can help you \"go back\"")
         slowprint("Well! Let's see...", 0.3)
         while True:
             print("\n\n")
@@ -2095,7 +2152,7 @@ def nightstalkerevent():
     sleep(2)
     slowprint("The glow has gets brighter as it draws near and you at first feel hopeful until it gets close enough to make out what is making the light.", 0.3)
     slowprint("It is a sort of anglerfish cat you later named the \"Lunaris Nightstalker\" which has black fur other than its glowing eyes and lure. It seems to be a predator and it does not look away from you.", 0.3)
-    slowprint("You realize you might have to " + "\033[1m" + "fight it" + "\033[0m" + " but you would prefer to either " + "\033[1m" + "study it or just run away." + "\033[0m", 0.3)
+    slowprint("You realize you might have to \"fight it\"" + " but you would prefer to either \"study it or just run away.\"", 0.3)
     print("\n\n")
     slowprint("You stand up to try and confront it but you realize that this is no ordinary cat either, it is much more like the size of a lion instead.", 0.3)
     fight = random.randint(0, 10)
@@ -2192,7 +2249,7 @@ def nightwolfevent():
     slowprint("As you lay there hidden under a large tree root waiting for dawn to break, you see some faint glows pass by from a creature but you seem to have not been detected.", 0.3)
     slowprint("That is until you realize that you hiding stop is occupated by only you as you hear some rustling underneath you. There seems to be a small burrow if you go deeper.", 0.3)
     print("\n\n")
-    slowprint("You can either " + "\033[1m" + "stay put" + "\033[0m" + " or " + "\033[1m" + "go into the burrow." + "\033[0m", 0.3)
+    slowprint("You can either \"stay put\"" + " or \"go into the burrow.\"", 0.3)
     slowprint("So... What do you do?", 0.3)
     command = input(">")
     if command == "stay put":
@@ -2221,8 +2278,8 @@ def nightwolfevent():
                     slowprint("You are now given the chance to study it and you do exactly that.")
                     print("\n\n")
                     sleep(2)
-                    slowprint(database.Discovery.LunarisNightstalker, 0.3)
-                    NoteAccess.LunarisNightstalkerNote += 1
+                    slowprint(database.Discovery.SylvanWolf, 0.3)
+                    NoteAccess.SylvanWolfNote += 1
     else:
         print(database.error)
         print("\n\n")
@@ -2418,6 +2475,49 @@ class Combat():
                     print("\n\n")
 
 
+def closenotebook():
+    global area
+    if area == 0:
+        room2()
+    elif area == 1:
+        room1()
+    elif area == 2:
+        room2()
+    elif area == 3:
+        room3()
+    elif area == 4:
+        room4()
+    elif area == 5:
+        room5()
+    elif area == 6:
+        room6()
+    elif area == 7:
+        room7()
+    elif area == 8:
+        room8()
+    elif area == 9:
+        room9()
+    elif area == 10:
+        river10()
+    elif area == 11:
+        river11()
+    elif area == 12:
+        river12()
+    elif area == 13:
+        river13()
+    elif area == 14:
+        waterfall14()
+    elif area == 15:
+        lake15()
+    elif area == 16:
+        lake16()
+    elif area == 17:
+        lake17()
+    elif area == 18:
+        cliff18()
+    elif area == 19:
+        cliff19()
+
 class NoteAccess():
     AridStalkerNote = 0
     PetalbloomViperNote = 0
@@ -2435,12 +2535,12 @@ class NoteAccess():
 def notebook():
     slowprint("You opened your trusty notebook that is embedded in your clothes.", 0.3)
     print("\n")
-    slowprint("Which page would you like to open? You can do the " + "\033[1m" + "index" + "\033[0m"+ " command to see the pages to open.", 0.3)
+    slowprint("Which page would you like to open? You can do the \"index\""+ " command to see the pages to open.", 0.3)
     
     while 1 == 1:
         openpage = input(">")
         if openpage == "index":
-            slowprint("\033[1m" + "Notebook Index" + "\033[0m" + "\n\
+            slowprint("\033[1m" + "Notebook Index\"" + "\n\
                     Herbivores:\n\
                     Page 1. Arid Stalker\n\
                     Page 2. Petalbloom Viper\n\
@@ -2458,58 +2558,57 @@ def notebook():
                     \
                     To close the notebook, use the \"close notebook\" command")
 
-        elif openpage == "Page One" or "page one" or "page 1" or "Page 1" or "Arid Stalker" or "Arid Stalker page" or "Arid Stalker Page":
+        elif openpage in ["Page One", "page one", "page 1", "Page 1", "Arid Stalker", "Arid Stalker page", "Arid Stalker Page"]:
             if NoteAccess.AridStalkerNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.AridStalker, 0.3)
-        elif openpage == "Page Two" or "page two" or "page 2" or "Page 2" or "Petalbloom Viper" or "Petalbloom Viper page" or "Petalbloom Viper Page":
+        elif openpage in ["Page Two", "page two", "page 2", "Page 2", "Petalbloom Viper", "Petalbloom Viper page", "Petalbloom Viper Page"]:
             if NoteAccess.PetalbloomViperNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.PetalbloomViper, 0.3)
-        elif openpage == "Page Three" or "page three" or "page 3" or "Page 3" or "Arboreal Glider" or "Arboreal Glider page" or "Arboreal Glider Page":
+        elif openpage in ["Page Three", "page three", "page 3", "Page 3", "Arboreal Glider", "Arboreal Glider page", "Arboreal Glider Page"]:
             if NoteAccess.ArborealGliderNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.ArborealGlider, 0.3)
-        elif openpage == "Page Four" or "page four" or "page 4" or "Page 4" or "Sylvan Wolf" or "Sylvan Wolf page" or "Sylvan Wolf Page":
+        elif openpage in ["Page Four", "page four", "page 4", "Page 4", "Sylvan Wolf", "Sylvan Wolf page", "Sylvan Wolf Page"]:
             if NoteAccess.SylvanWolfNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.SylvanWolf, 0.3)
-        elif openpage == "Page Five" or "page five" or "page 5" or "Page 5" or "Alkandros Butterfly" or "Alkandros Butterfly page" or "Alkandros Butterfly Page":
+        elif openpage in ["Page Five", "page five", "page 5", "Page 5", "Alkandros Butterfly", "Alkandros Butterfly page", "Alkandros Butterfly Page"]:
             if NoteAccess.AlkandrosButterflyNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.AlkandrosButterfly, 0.3)
-
-        elif openpage == "Page Six" or "page six" or "page 6" or "Page 6" or "Umbrella Bird" or "Umbrella Bird page" or "Umbrella Bird Page":
+        elif openpage in ["Page Six", "page six", "page 6", "Page 6", "Umbrella Bird", "Umbrella Bird page", "Umbrella Bird Page"]:
             if NoteAccess.UmbrellaBirdNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.UmbrellaBird, 0.3)
-        elif openpage == "Page Seven" or "page seven" or "page 7" or "Page 7" or "Rabbit of Caerbannog" or "Rabbit of Caerbannog page" or "Rabbit of Caerbannog Page":
+        elif openpage in ["Page Seven", "page seven", "page 7", "Page 7", "Rabbit of Caerbannog", "Rabbit of Caerbannog page", "Rabbit of Caerbannog Page"]:
             if NoteAccess.RabbitOfCaerbannogNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.RabbitofCaerbannog, 0.3)
-        elif openpage == "Page Eight" or "page eight" or "page 8" or "Page 8" or "Lunaris Nightstalker" or "Lunaris Nightstalker page" or "Lunaris Nightstalker Page":
+        elif openpage in ["Page Eight", "page eight", "page 8", "Page 8", "Lunaris Nightstalker", "Lunaris Nightstalker page", "Lunaris Nightstalker Page"]:
             if NoteAccess.LunarisNightstalkerNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.LunarisNightstalker, 0.3)
-        elif openpage == "Page Nine" or "page nine" or "page 9" or "Page 9" or "Titant" or "Titant page" or "Titant Page":
+        elif openpage in ["Page Nine", "page nine", "page 9", "Page 9", "Titant", "Titant page", "Titant Page"]:
             if NoteAccess.TitantNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.Titant, 0.3)
-        elif openpage == "Page Ten" or "page ten" or "page 10" or "Page 10" or "Isdrekin" or "Isdrekin page" or "Isdrekin Page":
+        elif openpage in ["Page Ten", "page ten", "page 10", "Page 10", "Isdrekin", "Isdrekin page", "Isdrekin Page"]:
             if NoteAccess.IsdrekinNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
                 slowprint(database.Notebook.Isdrekin, 0.3)
-        elif openpage == "Page Eleven" or "page eleven" or "page 11" or "Page 11" or "The Gun Ducks" or "The Gun Ducks page" or "The Gun Ducks Page":
+        elif openpage in ["Page Eleven", "page eleven", "page 11", "Page 11", "The Gun Ducks", "The Gun Ducks page", "The Gun Ducks Page"]:
             if NoteAccess.GunDuckNote == 0:
                 slowprint("You haven't written anything down yet.", 0.3)
             else:
@@ -2517,11 +2616,10 @@ def notebook():
 
         elif openpage == "close notebook":
             slowprint("You closed the notebook\n\n", 0.3)
-            break
+            closenotebook
         else: 
             print(database.error)
             print("\n\n")
-
 
 def time():
     global area
@@ -2544,5 +2642,5 @@ def time():
 
 def gameover():
     print("\n\n\n")
-    print("\033[1m" + "You died. Want to try and play the game again? Ask for permission!" + "\033[0m")
+    print("\033[1m" + "You died. Want to try and play the game again? Ask for permission!\"")
     exit()

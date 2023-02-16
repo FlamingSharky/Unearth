@@ -30,20 +30,21 @@ def titlescreen():
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 def startskip():
-    slowprint("Do you wish to view beginning cutscene?", 0.3)
-    begin = input("Yes or No:\n>")
-    if begin == "Yes":
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        beginningscene()
-        wakeupscene()
-        room0()
-    elif begin == "No":
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        wakeupscene()
-        room0()
-    else:
-        print(database.error)
-        print("\n\n")
+    slowprint("Do you wish to view beginning cutscene? \n(If this is your first time playing, you should definitely watch it; I added a developer's note directed to you and you specifically!\n", 0.3)
+    while 1 == 1:
+        begin = input("Yes or No:\n>")
+        if begin == "Yes":
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+            beginningscene()
+            wakeupscene()
+            room0()
+        elif begin == "No":
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+            wakeupscene()
+            room0()
+        else:
+            print(database.error)
+            print("\n\n")
 
 def beginningscene():
     print("\n")
@@ -89,7 +90,7 @@ def beginningscene():
     sleep(2)
     slowprint("You got to the safety pod room in the spaceship. You sigh...", 0.3)
     sleep(1)
-    slowprint("\033[1m" + "\"Oh phew, thank god everything is alri-\"" + "\033[0m",2)
+    slowprint("\"Oh phew, thank god everything is alri-\"",2)
     print("\n")
     print(database.crash)
     print("\n\n\n")
@@ -103,8 +104,8 @@ def beginningscene():
     sleep(2)
     slowprint("...", 0.3)
     print("\n")
-    slowprint("\033[1m" + "Oh right, just to let you know, any bolded text is probably a command." + "\033[0m", 0.3)
-    slowprint("-Developer", 0.3)
+    slowprint("Oh right, just to let you know, any text in quotation marks is probably one of the \"commands.\"\n(Yes, commands is a command)", 0.3)
+    slowprint("                                                                               -Developer", 0.3)
     print("\n\n\n\n\n")
     sleep(10)
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
@@ -139,7 +140,7 @@ def room0():
     slowprint("You probably aren't safe.", 1)
     sleep(1)
     print("\n")
-    slowprint("You hear a voice in your head say: Hey, you should type \"" + "\033[1m" + "commands" + "\033[0m"+ "\" in the input find out what you can do! However, you should look at everything before going anywhere!", 0.1)
+    slowprint("You hear a voice in your head say: Hey, you should type \"commands\" in the input find out what you can do! However, you should look at everything before going anywhere!", 0.1)
     print("\n")
     slowprint("So...", 0.3)
     gameevents.time()
@@ -258,6 +259,7 @@ elif name == "developer":
     gameevents.room2()
 else:
     startskip()
+
 restart = input(">>>")
 if restart == "Dark Ages Expedition":
     restartgame()

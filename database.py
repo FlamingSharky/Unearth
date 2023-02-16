@@ -62,6 +62,10 @@ class Discovery():
     \n\
     As you continue to observe the Nightstalker, you see that it is muscular and athletic like a lion; its body perfectly adapted for hunting in the dark forest. Its movements are graceful, yet powerful, as it continues to circle you, studying you in return. You can't help but feel a sense of awe at the magnificent creature, the Lunaris Nightstalker, that you are lucky enough to be studying.", width=150)
 
+    SylvanWolf = textwrap.fill("As you get comfortable with the Sylvan Wolf, you take the time to analyze it as you make sure it trusts you. You can feel its chest being protected by a living wood armor that covers its chest and even moves around with your touch. It seems to be rather hardy and it might even be apart of its skin. Its lower half seems to be spirit-like and when you try to touch it, your hand passes through as it is enveloped by it; it feels warm.\n\
+    \n\
+    The Sylvan Wolf's horn that showed up at first seems to have grown down and it seems to be able to fully control the living wood that the horn and its upperbody are made of. Finally it reveals its final ability to you as it changes colors to match its environment seeming nearly invisible to your eyes; you wouldn't notice it if you didn't know it was there in the first place. You certainly had decided it was a good thing to have befriended this creature.", width=150)
+
 ### Quick Physical Analysis ###
 
 class Glance():
