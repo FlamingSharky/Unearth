@@ -162,6 +162,7 @@ def room0():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
@@ -185,8 +186,8 @@ def room0():
             slowprint("There are some trees here and there that you cannot identify", 0.3)
             print("\n")
             slowprint("The voice in your head:", 0.1)
-            slowprint("I suggest you use the \"" + "\033[1m" + "options" + "\033[0m" + "\" command. It will tell you what you can do!", 0.1)
-            slowprint("You should definitely use the \"" + "\033[1m" + "map" + "\033[0m" + "\" command as well!", 0.1)
+            slowprint("I suggest you use the \"options\" command. It will tell you what you can do!", 0.1)
+            slowprint("You should definitely use the \"map\" command as well!", 0.1)
             print("\n\n")
             slowprint("Anyways...", 0.3)
         elif command == "look at the scenery":
