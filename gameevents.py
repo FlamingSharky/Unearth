@@ -783,14 +783,14 @@ def room7():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You hear a hiss as you look around in this swamp you're in.", 0.1)
-            print("\n")
+            slowprint("You hear a hiss as you look around in this swamp you're in. You might get attacked.", 0.1)
             print("\n")
             sleep(2)
-            x = random.randint(0,3)
+            x = random.randint(1,3)
             if x == 1:
                 petalbloomviperevent()
             else:
+                slowprint("Nevermind, things seem to be alright. For now...", 0.3)
                 continue
         elif command == "look at the scenery":
             print("\n")
