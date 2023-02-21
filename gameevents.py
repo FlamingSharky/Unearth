@@ -531,7 +531,7 @@ def room5():
                 print("\n")
                 slowprint("As you look around, you see a lush, verdant forest with sunlight here and there from the branches.", 0.3)
                 slowprint("The air was thick with the scent of dirt, leaves, and flowers.", 0.3)
-                slowprint("Suddenly, you also see a massive ant with mandibles the size of your arms. It seems to be chasing after something.")
+                slowprint("Suddenly, you also see a massive ant with mandibles the size of your arms. It seems to be chasing after something.", 0.3)
                 slowprint("A moment later, you see its enemy, a mix of a spirit wolf and a deer as they circle one another to measure their", 0.3)
                 slowprint("strengths and weaknesses. As they exchange blows, the ant grabs ahold of the wolf to realize that it was its major mistake.", 0.3)
                 slowprint("The wolf sinks its teeth into its mandibles, snapping off one of them which led to the wolf impaling the ant with its", 0.3)
