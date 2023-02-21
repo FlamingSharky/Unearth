@@ -1,6 +1,6 @@
 import textwrap
 
-mistakeprevention = "commands" or "COMMANDS" or "help" or "cOMMANDS" or "commandlist" or "command list" or "help me" or "HELP" or "hELP" or "Help" or "Commands"
+mistakeprevention = ["commands", "COMMANDS", "help", "cOMMANDS", "commandlist", "command list", "help me", "HELP", "hELP", "Help", "Commands"]
 
 
 ### Messages ###
@@ -11,7 +11,7 @@ river = "As you look towards the river, you notice the fish swimming about.\n"\
         "Some fish are silvery, some gold, and some other colors are seen in the river as well.\n"\
         "The waters seem to be calm."
 
-error = textwrap.fill("Hey! You seem to have made a mistake when writing the commands! Maybe write " + "\033[1m" + "commands" + "\033[0m" + " to see what you can do!", width=150)
+error = textwrap.fill("Hey! You seem to have made a mistake when writing the commands! Maybe write \"commands\" to see what you can do!", width=150)
 
 desertscenery = textwrap.fill("From the top of the cliff, you gaze down upon a vast desert landscape that stretches as far as the eye can see. Despite its barren appearance, the desert is bustling with life. You see tall cacti swaying in the wind, a family of an unknown desert creature scurrying across the sand, and a group of Isdrekin soaring overhead. In the distance, you spot a herd of majestic desert Sylvan Wolves grazing. It's a unique and fascinating ecosystem, full of adaptations and survival strategies for life in such a harsh environment.\nYou wish to explore it in the future as well.", width=150)
 
@@ -20,11 +20,12 @@ lakescenery = textwrap.fill("You stand on the sandy shoreline of a vast lake; he
 
 ### Creatures ###
 
-# Herbivores #
+
 class Notebook():
+    # Herbivores #
     AridStalker = textwrap.fill("\033[1m" + "Note: The Arid Stalker\n" + "\033[0m" +"The Arid Stalker is a large salamander-like creature with a metallic cephalofoil underneath its eyes. It tends to be found hiding under the sand and it sees with one of its three eyes on top of its head. The other two are on the sides. It only attacks if its food source is threatened.\nBehavior: Neutral\nPreferred Food: Aloevirides", width=150)
 
-    PetalbloomViper = textwrap.fill("\033[1m" + "Note: The Petalbloom Viper\n" + "\033[0m" +"The Petalbloom Viper is an odd species of plant and snake that can change size at will. It seems to be more like a living plant rather than an animal.\nBehavior: Friendly\nPreferred Food: Cannibal", width=150)
+    PetalbloomViper = textwrap.fill("\033[1m" + "Note: The Petalbloom Viper\n" + "\033[0m" +"The Petalbloom Viper is an odd species of plant and snake that can change size at will. It seems to be more like a living plant rather than an animal and it surprisingly does not know how to control its strength whenever it coils around you in its attempt to make friends.\nBehavior: Friendly\nPreferred Food: Cannibal", width=150)
 
     ArborealGlider = textwrap.fill("\033[1m" + "Note: The \n" + "\033[0m" +"The Arboreal Glider is a creature with green fur and large leaf-like gliding appendages. Skittish but can trust if it considers you a safe space. Herbivorous, feeds on fruits and flowers as it glides from tree to tree.\nBehavior: Skittish\nPreferred Food: Fruits and Flowers", width=150)
 
@@ -66,12 +67,20 @@ class Discovery():
     \n\
     The Sylvan Wolf's horn that showed up at first seems to have grown down and it seems to be able to fully control the living wood that the horn and its upperbody are made of. Finally it reveals its final ability to you as it changes colors to match its environment seeming nearly invisible to your eyes; you wouldn't notice it if you didn't know it was there in the first place. You certainly had decided it was a good thing to have befriended this creature.", width=150)
 
+    PetalbloomViper = textwrap.fill("The Petalbloom Viper is a unique hybrid species with intriguing biological characteristics. Being a combination of a plant and a snake, it is capable of changing its size from small to large, which is a remarkable ability. This adaptation allows it to survive in different environments and may give it an advantage in hunting prey.\n\
+    \n\
+    One of the most distinctive aspects of the Petalbloom Viper's behavior is its strict cannibalism. By only eating other members of its own species, this creature has developed a unique ecological niche that may provide it with competitive advantages in certain environments. However, as a herbivore, it is not dependent on consuming other animals for sustenance, which may help explain how it is able to thrive despite this behavior.\n\
+    \n\
+    The snake's friendly nature towards humans is a fascinating aspect of its behavior. Although it is a cannibal, it shows a liking towards human attention and has been known to be kind towards humans. The appearance of the Petalbloom Viper is also noteworthy, as it is likely to be flower-like. This feature could be an adaptation for attracting prey or mates, or a byproduct of its hybrid nature.\n\
+    \n\
+    One potential issue with the Petalbloom Viper's behavior is its lack of control over its strength when wrapping around humans. This could pose a risk to human safety, especially if the snake is not properly handled or trained. Further research is needed to fully understand the behavior and biology of this unique species.", width=150)
 ### Quick Physical Analysis ###
 
 class Glance():
     AridStalker = textwrap.fill("As you get a better look at the creature in front of you. It resembles a large salamander, with scaly orange skin that blends in perfectly with the surrounding sand. Its most striking feature is its metallic, round-hammer shaped jaw, located directly underneath its eyes and a smaller counterpart more axe-like on its tail. It has three eyes in total, with one on top with the other two on either side of its face. The creature seems to be guarding something.", width=150)
     LunarisNightstalker = textwrap.fill("As you gaze upon the creature in front of you, your eyes struggle to make out its full form in the dim light. However you can make out an eerie creature with a cat-like body and an otherworldy glow to it. The glow shows its sharp teeth, two tails, its paws with sharp claws out as well. This is no ordinary feline but instead a fearsome predator that hunts in the shadows. You brace yourself for any sudden movements.", width=150)
     SylvanWolf = textwrap.fill("As you glance at the Sylvan Wolf, you see a creature that stands at around 4 feet tall. It has an upper body that is made of live tree wood with its lower body appearing to be almost ghost-like. The creature's retractable horns are made of the same material as its hide, and they catch the light as they shift position. The Sylvan Wolf appears to be changing color, blending in with its surroundings, making it difficult to see.", width=150)
+    PetalbloomViper = textwrap.fill("As you catch a glimpse of the Petalbloom Viper, you notice its massive size, towering over you. Its body is covered in colorful petals, giving it a floral appearance. The snake's friendly demeanor is still there but it seems to know that it will fight if it has to.", width=150)
 
 Environment = textwrap.fill("As I look around me, the breathtaking beauty of this world is hard to ignore. The warm orange-purple sky is dotted with floating islands held aloft by massive tree roots, and the dual suns create a spiraling dance that illuminates the entire world. I am standing on a grassland that stretches out before me, dotted with patches of bright, colorful flora. In the distance, I can see a dense forest that seems to go on forever, with tall trees and lush undergrowth. To the west, there is a lake with pristine blue waters that are teeming with life.\nBut despite its beauty, this is also a world that is filled with danger. The balance of nature here is delicate, and I have seen the power of the environment firsthand. The massive battles between the amphithers and  that shake the floating islands are a reminder that this world can be unforgiving, and the creatures that inhabit it are both beautiful and deadly. But this balance is also what makes Unearth so unique. The harmony between the beauty and the danger is what gives this world its character, and it is a reminder of the incredible resilience of nature. I am in awe of the world I find myself in on Unearth, and I am eager to continue my studies of this incredible planet.", width=150)
 

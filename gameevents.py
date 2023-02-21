@@ -32,11 +32,22 @@ def room1():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the river\n"\
+                    "go to the lake\n"\
+                    "go east\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "look at the lake\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
@@ -51,6 +62,7 @@ def room1():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -58,10 +70,15 @@ def room1():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
+            slowprint("You hear a hiss as you look around in this swamp you're in.", 0.1)
             print("\n")
             print("\n")
-            slowprint("Anyways...", 0.3)
+            sleep(2)
+            x = random.randint(0,3)
+            if x == 1:
+                petalbloomviperevent()
+            else:
+                continue
         elif command == "look at the scenery":
             print("\n")
             slowprint(database.scenery, 0.3)
@@ -109,6 +126,8 @@ def room1():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -136,11 +155,21 @@ def room2():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the river\n"\
+                    "go east\n"\
+                    "go west\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
@@ -154,6 +183,7 @@ def room2():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -205,6 +235,10 @@ def room2():
             notebook()
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -233,11 +267,19 @@ def room3():
         command = input(">")
         print("\n")
         print()
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("go to the river\n"\
+                    "go west\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("go to the river\n"\
@@ -249,6 +291,7 @@ def room3():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -298,6 +341,8 @@ def room3():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -325,11 +370,22 @@ def room4():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the lake\n"\
+                    "go east\n"\
+                    "go north\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "look at the lake\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
@@ -344,6 +400,7 @@ def room4():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -351,10 +408,15 @@ def room4():
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
+            slowprint("You hear a hiss as you look around in this swamp you're in.", 0.1)
             print("\n")
             print("\n")
-            slowprint("Anyways...", 0.3)
+            sleep(2)
+            x = random.randint(0,3)
+            if x == 1:
+                petalbloomviperevent()
+            else:
+                continue
         elif command == "look at the scenery":
             print("\n")
             slowprint(database.scenery, 0.3)
@@ -396,6 +458,8 @@ def room4():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -425,7 +489,7 @@ def room5():
                 msvcrt.getch()
             command = input(">")
             print("\n")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 slowprint("Possible Commands Include:\n", 0.3)
                 print("\n"\
                     "go east\n"\
@@ -437,6 +501,7 @@ def room5():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
             elif command == "options":
                 slowprint("Possible Commands Include:\n", 0.3)
@@ -450,6 +515,7 @@ def room5():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
             elif command == "look around":
                 print("\n")
@@ -500,6 +566,8 @@ def room5():
                     print("It is the middle of the day.")
                 elif timevalue < 12:
                     print(stringtime + ":00AM")
+            elif command == "wait":
+                wait()
             elif command == "devlocate":
                 print(area)
             else:
@@ -517,14 +585,11 @@ def room5():
             while msvcrt.kbhit():
                 msvcrt.getch()
             command = input(">")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 print("\nwait\nhide\nlook around\nmap\ntime\n")
             elif command == "wait":
                 slowprint("You decide to sit down and wait around for a bit.", 0.3)
                 nightstalkerevent()
-                slowprint("\n\nYou wait until the sun rises and not much else happens.")
-                timevalue = 3
-                room5()
             elif command == "hide":
                 slowprint("You decide to hide under a large root for the time being.")
                 x = random.randint(0,4)
@@ -575,11 +640,21 @@ def room6():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the river\n"\
+                    "go west\n"\
+                    "go north\n"\
+                    "go south\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the river\n"\
+                    "notebook\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
@@ -593,6 +668,7 @@ def room6():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -642,6 +718,8 @@ def room6():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -669,11 +747,21 @@ def room7():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
-            print("\n")
-            slowprint("You hear a voice in your head say: Here is the current list of commands!", 0.1)
-            print(commandlist)
-            print("\n")
+        if command in database.mistakeprevention:
+            slowprint("Possible Commands Include:\n", 0.3)
+            print("\n"\
+                    "go to the cliff\n"\
+                    "go to the lake\n"\
+                    "go east\n"\
+                    "go north\n"\
+                    "look around\n"\
+                    "look at the scenery\n"\
+                    "look at the lake\n"\
+                    "look at the cliff\n"\
+                    "map\n"\
+                    "time\n"\
+                    "wait\n"\
+                    "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
@@ -687,17 +775,23 @@ def room7():
                     "look at the cliff\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
-            slowprint("You look at the general area around you, north of you there is the swampy grasslands and east of you is more highlands.", 0.3)
+            slowprint("You look at the general area around you, north of you there is a river, west of you is a lake! In every other direction there seems to be more grasslands like the one you are in.", 0.3)
             slowprint("You know which direction things are based on your compass; you can only hope that it is accurate and not broken.", 0.3)
             slowprint("There are some trees here and there that you can't identify yet.", 0.3)
             print("\n")
-            slowprint("You should \"look around\" every so often. You might see something interesting!", 0.1)
+            slowprint("You hear a hiss as you look around in this swamp you're in.", 0.1)
             print("\n")
             print("\n")
-            slowprint("Anyways...", 0.3)
+            sleep(2)
+            x = random.randint(0,3)
+            if x == 1:
+                petalbloomviperevent()
+            else:
+                continue
         elif command == "look at the scenery":
             print("\n")
             slowprint(database.scenery, 0.3)
@@ -742,6 +836,8 @@ def room7():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -769,7 +865,7 @@ def room8():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                 "go to the cliff\n"\
@@ -846,6 +942,8 @@ def room8():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -873,7 +971,7 @@ def room9():
         slowprint("What do you do?:", 0.3)
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go north\n"\
@@ -887,6 +985,7 @@ def room9():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "options":
             slowprint("Possible Commands Include:\n", 0.3)
@@ -902,6 +1001,7 @@ def room9():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -961,7 +1061,9 @@ def room9():
             elif timevalue < 12:
                 print(stringtime + ":00AM")
         elif command == "devlocate":
-            print(area)   
+            print(area)
+        elif command == "wait":
+            wait()   
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -1001,7 +1103,7 @@ def river10():
             room1()
         elif command == "go east":
             river11()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go to the river\n"\
@@ -1101,7 +1203,7 @@ def river11():
             river10()
         elif command == "go east":
             river12()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                 "go to the river\n"\
@@ -1190,7 +1292,7 @@ def river12():
             river11()
         elif command == "go south":
             river13()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                 "go to the river\n"\
@@ -1278,7 +1380,7 @@ def river13():
             river11()
         elif command == "go south":
             waterfall14()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go to the river\n"\
@@ -1367,7 +1469,7 @@ def waterfall14():
             river11()
         elif command == "jump off":
             snaketaming()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go to the river\n"\
@@ -1464,7 +1566,7 @@ def lake15():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go east\n"\
@@ -1538,6 +1640,8 @@ def lake15():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -1568,7 +1672,7 @@ def lake16():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go east\n"\
@@ -1646,6 +1750,8 @@ def lake16():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
             print("\n")
@@ -1676,7 +1782,7 @@ def lake17():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go east\n"\
@@ -1750,10 +1856,11 @@ def lake17():
                 print(stringtime + ":00AM")
         elif command == "devlocate":
             print(area)
+        elif command == "wait":
+            wait()
         else:
             slowprint(database.error, 0.3)
-            print("\n")
-            print("\n")
+            print("\n\n")
 
 
 # [ ] [ ] [ ]
@@ -1785,7 +1892,7 @@ def cliff18():
             cliff19()
         elif command == "jump off":
             snaketaming()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                 "go north\n"\
@@ -1875,7 +1982,7 @@ def cliff19():
             cliff18()
         elif command == "jump off":
             snaketaming()
-        elif command == database.mistakeprevention:
+        elif command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                 "go north\n"\
@@ -1960,7 +2067,7 @@ def riverevent():
             msvcrt.getch()
         command = input(">")
         print("\n")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             print(commandlist)
             riverevent()
         elif command == "give up":
@@ -1989,7 +2096,6 @@ def riverevent():
             print("\n")
             print("\n")
 
-
 ### CREATURE EVENTS ###
 
 def cactusevent():
@@ -2013,7 +2119,7 @@ def cactusevent():
                 msvcrt.getch()
             command = input(">")
             print("\n")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 print("\nfight\nstudy\nrun away\nlook at the Arid Stalker\n")
             elif command == "fight":
                 print("\n")
@@ -2058,7 +2164,7 @@ def cactusevent():
 
 def duckevent():
     slowprint("You decide to go right to the waters of the lake where you see a squadron of ducks... with guns for mouths. You probably should try and make sure that they don't see you.", 0.3)
-    slowprint("You decide to just stay quiet and watch...\n")
+    slowprint("You decide to just stay quiet and watch...\n", 0.3)
     sleep(3)
     x = random.randint(0, 10)
     if x >= 7:
@@ -2078,7 +2184,6 @@ def duckevent():
 def snaketaming():
     global area
     global timevalue
-    stringtime = str(timevalue)
     print("\n")
     slowprint("You took a running leap off the cliff!", 0.3)
     x = random.randint(0, 10)
@@ -2106,7 +2211,7 @@ def snaketaming():
                 msvcrt.getch()
             command = input(">")
             print("\n")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 print("\nfight\nstudy\nrun away\nlook around\nlook at the Isdrekin\nmap\ntime\n")
             elif command == "fight":
                 print("\n")
@@ -2122,11 +2227,13 @@ def snaketaming():
                 slowprint("Before you study it, you make sure to not provoke it on its back as it seems to be pretty calm as it glides around.", 0.3)
                 sleep(2)
                 slowprint(database.Discovery.Isdrekin, 0.3)
+                NoteAccess.IsdrekinNote += 1
             elif command == "study it":
                 print("\n")
                 slowprint("You rub the amphithere next to the neck to make sure you aren't of any danger before studying it.", 0.3)
                 sleep(2)
                 slowprint(database.Discovery.Isdrekin, 0.3)
+                NoteAccess.IsdrekinNote += 1
             elif command == "go back":
                 x = random.randint(0, 10)
                 if x >=5:
@@ -2143,6 +2250,7 @@ def snaketaming():
         gameover()
 
 def nightstalkerevent():
+    global timevalue
     print("\n\n")
     slowprint("The night in the forest is dark and you hear sounds that you'd never hear in the day.", 0.3)
     print("\n")
@@ -2168,21 +2276,16 @@ def nightstalkerevent():
                 msvcrt.getch()
             command = input(">")
             print("\n")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 print("\nfight\nstudy\nrun away\nlook around\nlook at the Lunaris Nightstalker\n")
             elif command == "fight":
                 print("\n")
                 slowprint("You have decided to fight the Lunaris Nightstalker. Sounds like fun!!! >:)", 0.3)
                 Combat.LunarisNightstalker()
-                slowprint("Congratulations on defeating the Lunaris Nightstalker", 0.3)
-                break
             elif command == "fight it":
                 print("\n")
                 slowprint("You have decided to fight the Lunaris Nightstalker. Let's brawl!!! >:)", 0.3)
                 Combat.LunarisNightstalker()
-                slowprint("Congratulations on defeating the Lunaris Nightstalker", 0.3)
-                break
-
             elif command == "study":
                 print("\n")
                 slowprint("You hold your ground and without any items on hand, you attempt to calmly approach the Lunaris Nightstalker to see if you can gain its trust.", 0.3)
@@ -2243,6 +2346,17 @@ def nightstalkerevent():
                     sleep(2)
                     slowprint("You trip on a root and failed to run away. The last thing you see is the blue glow of the Nightstalker and...", 0.3)
                     gameover()
+            elif command == "look around":
+                slowprint("It is simply too dark around you to see. You can only see the Lunaris Nightstalker in front of you.", 0.3)
+            elif command == "look at the Lunaris Nightstalker":
+                slowprint(database.Glance.LunarisNightstalker, 0.3)
+                print("\n\n")
+            else:
+                slowprint(database.error, 0.3)
+                print("\n\n")
+    slowprint("\n\nYou wait until the sun rises and not much else happens.")
+    timevalue = 3
+    room5()
 
 def nightwolfevent():
     print("\n\n")
@@ -2265,11 +2379,11 @@ def nightwolfevent():
             while msvcrt.kbhit():
                 msvcrt.getch()
             command = input(">")
-            if command == database.mistakeprevention:
+            if command in database.mistakeprevention:
                 print("\nfight\nstudy\nstay still\nlook around\nlook at the Sylvan Wolf\n")
-            elif command == "fight" or "fight it":
+            elif command in ["fight", "fight it"]:
                 Combat.SylvanWolf()
-            elif command == "study" or "study it":
+            elif command in ["study", "study it"]:
                 print("\n")
                 slowprint("You try and get the Sylvan Wolf to trust you and seems likely to happen considering as they are .", 0.3)
                 y = random.randint(1, 10)
@@ -2283,6 +2397,68 @@ def nightwolfevent():
     else:
         print(database.error)
         print("\n\n")
+
+def petalbloomviperevent():
+    global area
+    global timevalue
+    print("\n")
+    slowprint("You took a running leap off the cliff!", 0.3)
+    x = random.randint(0, 10)
+    slowprint("...", 1)
+    sleep(1)
+    slowprint("...", 1)
+    sleep(1)
+    slowprint("...", 1)
+    sleep(1)
+    slowprint("It is getting closer...", 0.3)
+    sleep(1)
+    slowprint("...", 1)
+    sleep(1)
+    slowprint("...", 1)
+    sleep(1)
+    if x >= 2:
+        print("\n")
+        slowprint("You are jumped on by a viper known as the Petalbloom Viper and it coils around you tightly. However it reaches a point where it stops and it doesn't seem to be aggressive.", 0.3)
+        slowprint("You really can't get back up or anything but it seems to just want to vibe around with you. I guess there is no harm if you just \"wait\" for it to leave. Maybe instead take the chance to \"study\" it or you can be aggressive and \"fight\" it")
+        slowprint("Well! Let's decide...", 0.3)
+        while True:
+            print("\n\n")
+            slowprint("What do you do?:", 0.3)
+            while msvcrt.kbhit():
+                msvcrt.getch()
+            command = input(">")
+            print("\n")
+            if command in database.mistakeprevention:
+                print("\nfight\nstudy\nrun away\nlook around\nlook at the Isdrekin\nmap\ntime\n")
+            elif command == "fight":
+                print("\n")
+                slowprint("You take your knife and stab it. It uncoils and realizes you aren't friend but foe. The fight begins.", 0.3)
+                print("\n\n")
+                slowprint(Combat.PetalbloomViper, 0.3)
+            elif command == "fight it":
+                print("\n")
+                slowprint("You take your knife and stab it. It uncoils and realizes you aren't friend but foe. The fight begins.", 0.3)
+                slowprint(Combat.PetalbloomViper, 0.3)
+            elif command == "study":
+                print("\n")
+                slowprint("You decide to analyze the creature as it is peacefully vibing around you.", 0.3)
+                sleep(2)
+                slowprint(database.Discovery.PetalbloomViper, 0.3)
+                NoteAccess.PetalbloomViperNote += 1
+            elif command == "study it":
+                print("\n")
+                slowprint("You decide to analyze the creature as it is peacefully vibing around you.", 0.3)
+                sleep(2)
+                slowprint(database.Discovery.PetalbloomViper, 0.3)
+                NoteAccess.PetalbloomViperNote += 1
+            elif command == "wait":
+                slowprint("You wait around for it to decoil and you get back on your feet.", 0.3)
+                print("\n\n")
+                closenotebook()
+            print("\n")
+    else:
+        slowprint("A viper jumps on you and coils around you. It seems to be friendly but it also doesn't know its own strength. It accidentally tightens too much and breaks your spinal cord.", 0.3)
+        gameover()
 
 ### Combat ###
 
@@ -2327,6 +2503,7 @@ class Combat():
                 print(database.error)
                 print("\n\n")
     def LunarisNightstalker():
+        global timevalue
         slowprint("You pull out the knife embedded in your clothes and prepare to fight. Another sign of aggression which leads it to decrease its light levels. It might be preparing an attack", 0.3)
         while 1 == 1:
             print("\n\n")
@@ -2373,6 +2550,10 @@ class Combat():
             else:
                 print(database.error)
                 print("\n\n")
+        slowprint("Congratulations on defeating the Lunaris Nightstalker", 0.3)
+        slowprint("\n\nYou wait until the sun rises and not much else happens.")
+        timevalue = 3
+        room5()
     def SylvanWolf():
         slowprint("You pull out the knife embedded in your clothes and prepare to hunt the Sylvan Wolf.", 0.3)
         y = random.randint(1,2)
@@ -2414,9 +2595,9 @@ class Combat():
                             break
                 elif command == "counterattack":
                     slowprint("You expertly parry the incoming horns with your knife and cause the Sylvan Wolf to trip on the floor. It is now open.", 0.3)
-                    slowprint("\033[1m" + "Kill it or muzzle its mouth?", 0.3)
+                    slowprint("Kill it or muzzle its mouth?", 0.3)
                     command = input(">")
-                    if command == database.mistakeprevention:
+                    if command in database.mistakeprevention:
                         slowprint("Here are the possible commands:", 0.3)
                         print("kill it\nmuzzle it")
                     elif command == "kill the wolf" or "kill it":
@@ -2449,9 +2630,9 @@ class Combat():
                 print("\n")
                 if command == "fight to the death":
                     slowprint("You expertly parry the first couple of wolves with your knife and makes them more warry of you.", 0.3)
-                    slowprint("\033[1m" + "Attack or counterattack?", 0.3)
+                    slowprint("Attack or counterattack?", 0.3)
                     command = input(">")
-                    if command == database.mistakeprevention:
+                    if command in database.mistakeprevention:
                         slowprint("Here are the possible commands:", 0.3)
                         print("attack\ncounterattack")
                     elif command == "attack":
@@ -2473,7 +2654,49 @@ class Combat():
                 else:
                     print(database.error)
                     print("\n\n")
-
+    def PetalbloomViper():
+        global timevalue
+        slowprint("The Viper decoils and slithers a bit back. It is usually friendly and of the smaller size but it instantly begins to grow larger and longer preparing for this fight.", 0.3)
+        while 1 == 1:
+            print("\n\n")
+            slowprint("What do you do?:", 0.3)
+            print("\n")
+            print("Commands:\nattack\nprepare\nrun away\nlook at the Petalbloom Viper\n")
+            while msvcrt.kbhit():
+                msvcrt.getch()
+            command = input(">")
+            print("\n")
+            if command == "prepare":
+                slowprint("You prepare for an attack from the Petalbloom Viper. It's a giant plant-snake but you feel confident in your ability to defeat it.", 0.3)
+                print("\n")
+                sleep(3)
+                slowprint("However... nothing happens at all, it only waits for your attack.", 0.3)
+            elif command == "attack":
+                slowprint("You slash it and manage to deeply cut the Petalbloom Viper. It does not bleed nor does it show any sign of being hurt even with its deep cut.", 0.3)
+                slowprint("It retaliates and headbutts you to try and knock you unconsious rather than killing you. Truly a friendly creature.", 0.3)
+                y = random.randint(0,2)
+                if y >= 1:
+                    slowprint("The headbutt connects and you are knocked unconsious by the creature.", 0.3)
+                    timevalue += 4
+                    sleep(2)
+                    slowprint("You woke up 4 hours later.", 0.3)
+                    closenotebook()
+                else:
+                    slowprint("You have managed to dodge its headbutt as you counterattack its head...", 0.3)
+                    sleep(1)
+                    slowprint("You impale its skull and it drops dead immediately. You feel a slight feeling of regret.\n\n", 0.3)
+                    slowprint("Congratulations on defeating the Petalbloom Viper", 0.3)
+                    break
+            elif command == "run away":
+                slowprint("You run away from the gigantic Viper. It doesn't seem to chase you and just gets back to its original size. You think that you might not try and fight it next time.", 0.3)
+                break
+            elif command == "look at the Petalbloom Viper":
+                slowprint(database.Glance.PetalbloomViper, 0.3)
+                print("\n\n")
+            else:
+                print(database.error)
+                print("\n\n")
+        closenotebook()
 
 def closenotebook():
     global area
@@ -2540,7 +2763,7 @@ def notebook():
     while 1 == 1:
         openpage = input(">")
         if openpage == "index":
-            slowprint("\033[1m" + "Notebook Index\"" + "\n\
+            slowprint("\"Notebook Index\"" + "\n\
                     Herbivores:\n\
                     Page 1. Arid Stalker\n\
                     Page 2. Petalbloom Viper\n\
@@ -2640,7 +2863,139 @@ def time():
     elif 19 <= timevalue <= 24 or timevalue == 0 or timevalue == 1:
         slowprint("The moon is high in the sky.", 0.3)
 
+def wait():
+    global timevalue
+    slowprint("You decide to wait for the time to pass by.\nTo what hour would you like to wait for?\n( 0 - 24 )", 0.3)
+    command = input(">")
+    if command == "1":
+        timevalue = 1
+        slowprint("It is now 1:00AM\n", 0.3)
+        closenotebook()
+
+    elif command == "2":
+        timevalue = 2
+        slowprint("It is now 2:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "3":
+        timevalue = 3
+        slowprint("It is now 3:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "4":
+        timevalue = 4
+        slowprint("It is now 4:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "5":
+        timevalue = 5
+        slowprint("It is now 5:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "6":
+        timevalue = 6
+        slowprint("It is now 6:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "7":
+        timevalue = 7
+        slowprint("It is now 7:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "8":
+        timevalue = 8
+        slowprint("It is now 8:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "9":
+        timevalue = 9
+        slowprint("It is now 9:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "10":
+        timevalue = 10
+        slowprint("It is now 10:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "11":
+        timevalue = 11
+        slowprint("It is now 11:00AM\n", 0.3)
+        closenotebook()
+    
+    elif command == "12":
+        timevalue = 12
+        slowprint("It is now 12:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "13":
+        timevalue = 13
+        slowprint("It is now 13:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "14":
+        timevalue = 14
+        slowprint("It is now 14:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "15":
+        timevalue = 15
+        slowprint("It is now 15:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "16":
+        timevalue = 16
+        slowprint("It is now 16:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "17":
+        timevalue = 17
+        slowprint("It is now 17:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "18":
+        timevalue = 18
+        slowprint("It is now 18:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "19":
+        timevalue = 19
+        slowprint("It is now 19:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "20":
+        timevalue = 20
+        slowprint("It is now 20:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "21":
+        timevalue = 21
+        slowprint("It is now 21:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "22":
+        timevalue = 22
+        slowprint("It is now 22:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "23":
+        timevalue = 23
+        slowprint("It is now 23:00PM\n", 0.3)
+        closenotebook()
+    
+    elif command == "24":
+        timevalue = 24
+        slowprint("It is now 24:00AM\n", 0.3)
+        closenotebook()
+
+    elif command == "close":
+        closenotebook()
+    else:
+        slowprint(database.error, 0.3)
+        slowprint("By the way, you can write close to go back.", 0.3)
+        print("\n\n")
+        
 def gameover():
     print("\n\n\n")
-    print("\033[1m" + "You died. Want to try and play the game again? Ask for permission!\"")
+    print("You died. Want to try and play the game again? Just reopen the file!\"")
+    input()
     exit()

@@ -149,7 +149,7 @@ def room0():
         while msvcrt.kbhit():
             msvcrt.getch()
         command = input(">")
-        if command == database.mistakeprevention:
+        if command in database.mistakeprevention:
             slowprint("Possible Commands Include:\n", 0.3)
             print("\n"\
                     "go to the river\n"\
@@ -176,6 +176,7 @@ def room0():
                     "notebook\n"\
                     "map\n"\
                     "time\n"\
+                    "wait\n"\
                     "options\n")
         elif command == "look around":
             print("\n")
@@ -200,13 +201,10 @@ def room0():
             print("\n\n")
             slowprint("Anyhow...", 0.3)
         elif command == "go west":
-            database.area = 3
-            gameevents.room3
+            gameevents.room1()
         elif command == "go east":
-            database.area = 1
-            gameevents.room1
+            gameevents.room3()
         elif command == "go south":
-            database.area = 5
             gameevents.room5()        
         elif command == "go to the river":
             gameevents.river11()
@@ -224,28 +222,13 @@ def room0():
                 print("It is the middle of the day.")
             elif gameevents.timevalue < 12:
                 print(gameevents.stringtime + ":00AM")
+        elif command == "wait":
+            gameevents.wait()
         elif command == "devlocate":
-            print(database.area)
+            print(gameevents.area)
         else:
             slowprint(database.error, 0.3)
             print("\n\n")
-
-def restartgame():
-    global name
-    print("To begin, please set your username here:" + "\n")
-    print("(By the way, you can also set is as blank)" + "\n")
-    name = input()
-    print("\n\n\n")
-    if name == "":
-        name = "Frederick Fazbearington"
-        startskip()
-    elif name == "developer":
-        gameevents.room2()
-    else:
-        startskip()
-    restart = input(">>>")
-    if restart == "Dark Ages Expedition":
-        restartgame()
 
 titlescreen()
 print("To begin, please set your username here:" + "\n")
@@ -259,7 +242,3 @@ elif name == "developer":
     gameevents.room2()
 else:
     startskip()
-
-restart = input(">>>")
-if restart == "Dark Ages Expedition":
-    restartgame()
